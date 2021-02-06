@@ -12,9 +12,9 @@ import { Icon } from 'semantic-ui-react';
 
 export class FieldLabel extends Component {
   render() {
-    const { htmlFor, icon, label } = this.props;
+    const { htmlFor, icon, label, classname } = this.props;
     return (
-      <label htmlFor={htmlFor} id="top-level-fields">
+      <label htmlFor={htmlFor} className={classname}>
         {icon ? <Icon name={icon} /> : null}
         {label}
       </label>
@@ -26,4 +26,5 @@ FieldLabel.propTypes = {
   htmlFor: PropTypes.string,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   labelIcon: PropTypes.string,
+  classname: PropTypes.string,
 };
